@@ -1,0 +1,13 @@
+#include <iostream>
+     
+int main() {
+    int t;
+    while(1) {
+    std::cin >> t;
+    if( t == 42 )
+    break;
+    else
+    std::cout << t << std::endl;
+    }
+    }
+     
