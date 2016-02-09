@@ -1,0 +1,9 @@
+t=input()
+while t>0:
+    t-=1
+    n,m=raw_input().split()
+    n=n[::-1]
+    m=m[::-1]
+    n=int(n)+int(m)
+    n=str(n)
+    print int(n[::-1])
