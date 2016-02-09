@@ -1,0 +1,24 @@
+d={'+':1,'-':2, '*':3, '/':4, '^':5}
+t=input()
+for _ in xrange(t):
+	s=raw_input()
+	a=[]
+	b=''
+	for i in s:
+		
+		if (i not in d) and (i!=')' and i!='('): 
+			b+=i
+		elif i=='(':
+			a.append(i)
+		elif i==')':
+			u=a.pop()
+			while u!='(' :
+				b+=u
+				u=a.pop()
+		else:
+			while len(a)!=0 and (a[-1]!='(' and d[a[-1]]>d[i]):
+				u=a.pop()
+				b+=u
+			a.append(i)
+	while len(a)!=0:b+=a.pop()
+	print b
