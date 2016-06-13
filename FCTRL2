@@ -1,0 +1,12 @@
+"""
+language : python2.7
+@author : kp1994
+"""
+t=input()
+
+for _ in xrange(t):
+	n=input()
+	p=1
+	for i in xrange(2,n+1):
+		p*=i
+	print p
