@@ -1,0 +1,23 @@
+#include "iostream"
+using namespace std;
+int main()
+{
+  int i,n,a[100000],sum;
+cin>>n;
+  while(n!=-1)
+  {
+    for(i=0,sum=0;i<n;cin>>a[i],sum+=a[i],i++);
+    if(sum%n!=0)cout<<"-1\n";
+    else
+    {
+      int q=sum/n;
+      for(sum=0,i=0;i<n;i++)
+      if(a[i]<q)sum+=q-a[i];
+      cout<<sum<<endl;
+    }
+
+    cin>>n;
+  }
+return 0;
+
+}
